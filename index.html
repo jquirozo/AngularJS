@@ -25,7 +25,13 @@
 			</li>			 
 		</ul>	
 	</div>
-	<div class="row">
+	<br/>
+	<center>
+		<button ng-click="ShowForm()" ng-hide="formVisibility" class="btn btn-primary">
+			Añadir Contacto Alumno
+		</button>
+	</center>
+	<div class="row" ng-show="formVisibility">
 		<h2>Añadir un Contacto</h2>
 		<form class="col-lg-6">
 			<fieldset class="form-group">

@@ -1,5 +1,7 @@
 var myApp = angular.module('myApp',[]);//creating app
 myApp.controller('AlumnosController', ['$scope', function($scope) { // creating controller
+	$scope.formVisibility = false;
+
     $scope.alumnos =[
 				{nombre: "Jacobo Quiroz", curso: "3ro ESO", telefono:"1234567890"},
 				{nombre: "Rosa Perez", curso: "1ro ESO", telefono:"1234567891"},
@@ -13,6 +15,13 @@ myApp.controller('AlumnosController', ['$scope', function($scope) { // creating 
 			telefono:$scope.nuevoAlumno.telefono,
 			curso:$scope.nuevoAlumno.curso
 		});
+		$scope.formVisibility = false;
+		console.log($scope.formVisibility)
+	}
+
+	$scope.ShowForm = function(){
+		$scope.formVisibility = true;
+		console.log($scope.formVisibility)
 	}
 
 }]);

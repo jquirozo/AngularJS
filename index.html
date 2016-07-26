@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<meta charset="utf-8">
-	<title>mi primer AngularJS</title>
+	<title>Modelo en Scope</title>
+
 </head>
-<body ng-app ng-init="Creadores = 'Misko Hevery y Adams Abrons' ">
-Angular Js fue creado por {{Creadores}} hace solo {{2014-2009}} años.
-<script type="text/javascript" src="js/angular.min.js"></script>
+<body ng-controller="AlumnosController">
+	<h1>Cuaderno Alumnos</h1>
+	<div>
+		<div ng-repeat="alumno in alumnos">
+			<div>{{alumno.nombre}} - {{alumno.telefono}}</div>
+			<span>{{alumno.curso}}</span>
+			<br>
+		</div>	
+	</div>
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/myJS.js"></script>
 </body>
 </html>

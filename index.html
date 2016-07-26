@@ -17,13 +17,12 @@
 <body ng-controller="AlumnosController" class="container">
 	<h1>Cuaderno Alumnos</h1>
 	<div class="row">
-		<ul clas="list-group">
-			<span  ng-repeat="alumno in alumnos">
-				<li class="list-group-item">{{alumno.nombre}} - {{alumno.telefono}}
-					<br>
-					<span class="">{{alumno.curso}}</span>				 
-				</li>	
-			</span>
+		<ul clas="list-group">			 
+			<li ng-repeat="alumno in alumnos | orderBy:'curso'" class="list-group-item">
+				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>						
+				<br>
+				<span>{{alumno.curso}}</span>				 
+			</li>			 
 		</ul>	
 	</div>
 

@@ -1,7 +1,28 @@
 <div class="container">
-	<h2>Mis Tareas</h2>
+	<!-- <h2>Mis Tareas</h2> -->
+	<!-- <carousel interval="setInterval">
+		<slide ng-repeat="slide in slides" active = "slide.active">
+			<img ng-src="{{slide.image}}" class="carousel-image">
+			<div class="carousel-caption">
+				<h2>{{slide.title}}</h2>
+				<p>{{slide.text}}</p>
+			</div>
+		</slide>
+	</carousel> -->
+	<br/>
+	<div class="row">
+		<uib-carousel interval="setInterval">
+	        <uib-slide ng-repeat="slide in slides" active="slide.active" index="$index">
+	          <img ng-src="{{slide.image}}" style="margin:auto;">
+	          <div class="carousel-caption">
+	            <h2>{{$index+1}}.-{{slide.title}}</h2>
+				<p>{{slide.text}}</p>
+	          </div>
+	        </uib-slide>
+	      </uib-carousel>
+	</div>
 	<!-- todos input -->
-	<form role="form" ng-submit="addTarea()">
+	<!-- <form role="form" ng-submit="addTarea()">
 		<div class="row">
 			<div class="input-group">
 				<input type="text" name="" ng-model="tarea" class="form-control" placeholder="Qué tarea quieres guardar?">
@@ -11,12 +32,11 @@
 			</div>
 		</div>
 	</form>
-	<p>
-		
-	</p>
+	<p>		
+	</p>-->
 	<!-- todo list -->
-	<div ui-sortable ng-model="tareas">
-		<p class="input-group" ng-repeat="tarea in tareas" style="padding:5px 10px; cursor:move;">		
+	<!-- <div ui-sortable ng-model="tareas">
+		<p class="input-group" ng-repeat="tarea in tareas | orderBy:tarea" style="padding:5px 10px; cursor:move;">		
 			<input type="text" name="" ng-model="tarea" class="form-control">
 			<span class="input-group-btn">
 				<button class="btn btn-danger" ng-click="eliminarTarea($index)" aria-label="Eliminar">
@@ -24,6 +44,6 @@
 				</button>
 			</span>
 		</p>	
-	</div>
+	</div> -->
 	
 </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp',[
+var app = angular.module('myApp',[
 		'ngAnimate',
 		'ngCookies',
 		'ngResource',
@@ -8,7 +8,8 @@ angular.module('myApp',[
 		'ngSanitize',
 		'ngTouch',
 		'ui.sortable',
-		'LocalStorageModule'
+		'LocalStorageModule',
+		'ui.bootstrap'
 		])
 		.config(['localStorageServiceProvider',function(localStorageServiceProvider){
 				localStorageServiceProvider.setPrefix('ls');

@@ -1,28 +1,26 @@
-<div class="">
-	<h1>Hola, Hola!</h1>
+<div class="container">
+	<h2>Mis Tareas</h2>
+	<!-- todos input -->
+	<form role="form" ng-submit="addTarea()">
+		<div class="row">
+			<div class="input-group">
+				<input type="text" name="" ng-model="tarea" class="form-control" placeholder="Qué tarea quieres guardar?">
+				<span class="input-group-btn">
+					<input type="submit" name="" class="btn btn-primary" value="Añadir">
+				</span>
+			</div>
+		</div>
+	</form>
 	<p>
-		<img src="images/ico.png" alt="I'm Funny"><br>
-		Always a pleasure scaffolding your apps
+		
 	</p>
-	<p><a href="#" class="btn btn-lg btn-success">Splendid!
-	<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-<ul class="row">
-	<li ng-repeat="things in awesomeThings">{{things}}</li>
-</ul>
-<div class="row">
-	<h4>HTML5 Boilerplate</h4>
-	<p>
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-	</p>
-
-	<h4>Angular</h4>
-	<p>
-		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-	</p>
-
-	<h4>Karma</h4>
-	<p>
-		Li Europan lingues es membres del sam familie. Lor separat
+	<!-- todo list -->
+	<p class="input-group" ng-repeat="tarea in tareas">		
+		<input type="text" name="" ng-model="tarea" class="form-control">
+		<span class="input-group-btn">
+			<button class="btn btn-danger" ng-click="eliminarTarea($index)" aria-label="Eliminar">
+				X
+			</button>
+		</span>
 	</p>
 </div>

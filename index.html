@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" lang="en">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
 	<title>Modelo en Scope</title>
  	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -14,59 +15,41 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-controller="AlumnosController" class="container">
-	<h1>Cuaderno Alumnos</h1>
-	<div class="row">
-		<ul clas="list-group">			 
-			<li ng-repeat="alumno in alumnos | orderBy:'curso'" class="list-group-item">
-				<div>{{alumno.nombre}} - {{alumno.telefono}}</div>						
-				<br>
-				<span>{{alumno.curso}}</span>				 
-			</li>			 
-		</ul>	
+<body ng-app="myApp">
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="#/about">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<he class="text-muted">
+				Hola
+			</he>
+		</div>
+
+		<div ng-view="">
+			
+		</div>
+		<div class="footer">
+			<p><span class="glyphicon glyphicon-hand-up">By JacobQO</span></p>
+		</div>
 	</div>
-	<br/>
-	<center>
-		<button ng-click="ShowForm()" ng-hide="formVisibility" class="btn btn-primary">
-			Añadir Contacto Alumno
-		</button>
-	</center>
-	<div class="row" ng-show="formVisibility">
-		<h2>Añadir un Contacto</h2>
-		<form class="col-lg-6">
-			<fieldset class="form-group">
-				<div class="form-group row">					
-					<label for="nombre" class="col-lg-4 form-control-label">Nombre:</label>
-					<div class="col-lg-8" >
-						<input type="text" class="form-control" name="nombre" ng-model="nuevoAlumno.nombre">
-					</div>					
-				</div>
-				<div class="form-group row" >
-					<label for="telefono" class="col-lg-4 form-control-label">Telefono:</label>
-					<div class="col-lg-8 ">
-						<input type="text" class="form-control" name="telefono" ng-model="nuevoAlumno.telefono">		
-					</div>						
-				</div>
-				<div class="form-group row">
-					<label for="curso" class="col-lg-4 form-control-label">Curso:</label>
-					<div class="col-lg-8">
-						<input type="text" class=" form-control" name="curso" ng-model="nuevoAlumno.curso">	
-					</div>
-				</div>
-				<div class="form-group row">
-					<div class="col-lg-offset-10">
-						<button type="button" class="btn btn-default " ng-click="Save()">Guardar</button>
-					</div>
-				</div>
-				
-			</fieldset>
-		</form>
-	</div>
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/myJS.js"></script>
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- librerias angular a utilizar -->
+    <script type="text/javascript" src="js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-touch.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/about.js"></script>
+	<script type="text/javascript" src="js/controllers/main.js"></script>	
+	
 </body>
 </html>

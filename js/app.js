@@ -25,6 +25,10 @@ var app = angular.module('myApp',[
 					templateUrl:'views/about.html',
 					controller:'AboutCtrl'	
 				})
+				.when('/articulos',{
+					templateUrl:'views/articulos.html',
+					controller:'ArticulosCtrl'	
+				})				
 				.otherwise({
 					redirectTo:'/'
 				});

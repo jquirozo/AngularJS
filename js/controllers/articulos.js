@@ -1,7 +1,7 @@
 'use strict';
 
-// angular.module('myApp').controller('ArticulosCtrl', function($scope){
-app.controller('ArticulosCtrl', function($scope){
+angular.module('myApp').controller('ArticulosCtrl', function($scope){
+//app.controller('ArticulosCtrl', function($scope){
 	$scope.posts = [
 		{
 			title:"Quiere la boca exhausta vid",

@@ -1,7 +1,7 @@
 'use strict';
 
-// angular.module('myApp').controller('MainCtrl', function($scope, localStorageService){
-app.controller('MainCtrl', function($scope){
+angular.module('myApp').controller('MainCtrl', function($scope, localStorageService){
+//app.controller('MainCtrl', function($scope){
 	var baseURL = 'http://lorempixel.com/960/450/';
 
 	$scope.setInterval=5000;

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp',[
+angular.module('myApp',[
 		'ngAnimate',
 		'ngCookies',
 		'ngResource',
@@ -28,6 +28,10 @@ var app = angular.module('myApp',[
 				.when('/articulos',{
 					templateUrl:'views/articulos.html',
 					controller:'ArticulosCtrl'	
+				})	
+				.when('/galeria',{
+					templateUrl:'views/galeria.html',
+					controller:'GaleriaCtrl'	
 				})				
 				.otherwise({
 					redirectTo:'/'

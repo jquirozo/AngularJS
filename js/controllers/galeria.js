@@ -35,7 +35,11 @@
 		});
 	}
 
-	for(var i=0; i <=5;i++){
+	for(var i=0; i <3;i++){
 		$scope.addPics(i);
 	}
+
+	$scope.rate = 0;
+	$scope.max = 10;
+	$scope.isReadonly = false;
 });

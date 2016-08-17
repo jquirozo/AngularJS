@@ -6,3 +6,11 @@ body {
 	width: 940px;
 	height: 300px;
 }
+
+.ngRow.even{
+	background: AliceBlue !important;
+}
+
+.ngRow.odd{
+	background: YellowGreen !important;
+}

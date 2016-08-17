@@ -1,3 +1,8 @@
 body {    
    padding-top: 70px;
 }
+
+.gridStyles{
+	width: 940px;
+	height: 300px;
+}
